@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="_template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-top">
+            <div class="wrapper-profile-top">
+                <div class="wrapper-left">
+                    <h1 class="first-name header">{{ resume.profile.first_name }}</h1>
+                    <h1 class="last-name header">{{ resume.profile.last_name }}</h1>
+                    <div class="meta header">
+                        <span class="function">{{ resume.profile.function }}</span>
+                        <span class="age">{{resume.profile.age}} Years Old</span>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <img src="images/picture.jpg" />
+                </div>
+            </div>
+            <div class="wrapper-profile-bottom">
+                <div class="summary">
+                    <h2>Professional profile</h2>
+                    <p>
+                        {{ resume.summary.text }}
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>contact</h2>
+                    <p>
+                        <ul>
+                            <li>E-mail: {{ resume.contact.email }}</li>
+                            <li>Phone: {{ resume.contact.phone }}</li>
+                            <li>LinkedIn: <a href="{{ resume.contact.linkedin }}" target="_blank">{{ resume.contact.linkedin_short }}</a></li>
+                            <li>Address: {{ resume.contact.address }}</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-bottom">
+            bottom
+        </div>
+    </div>
+</body>

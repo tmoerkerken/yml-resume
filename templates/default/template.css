@@ -1,0 +1,149 @@
+@page {
+  size: A4;
+  /* Change from the default size of A4 */
+  margin: 0mm;
+  /* Set margin on each page */
+}
+
+:root {
+  --picture-size: 160px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #444;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h2::before {
+  content: "# ";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
+
+.header {
+  text-transform: uppercase;
+  letter-spacing: 2;
+}
+
+p {
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-top {
+  width: 100%;
+  background: #f8f4f0;
+  padding: 4rem 3rem 2rem 3rem;
+}
+
+.wrapper-bottom {
+  width: 100%;
+  padding: 1rem 3rem 2rem 3rem;
+}
+
+.wrapper-profile-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-profile-top .first-name {
+  font-weight: 200;
+}
+
+.wrapper-profile-top .last-name {
+  font-weight: 800;
+}
+
+.wrapper-profile-top .meta {
+  margin-top: 1rem;
+}
+
+.wrapper-profile-top .age::before {
+  content: " / "
+}
+
+.wrapper-profile-top img {
+  float: right;
+  width: var(--picture-size);
+  height: var(--picture-size);
+  border-radius: 100%;
+  background-color: black;
+  filter: grayscale(1) contrast(0.8)
+}
+
+.wrapper-right::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  height: 2.5rem;
+  width: 2.5rem;
+  left: calc(50% - 1.25rem);
+  top: -4rem;
+  background-color: rgb(255, 179, 0);
+}
+
+.wrapper-profile-top .wrapper-left,
+.wrapper-profile-top .wrapper-right {}
+
+.wrapper-profile-top .wrapper-left {}
+
+.wrapper-profile-top .wrapper-right {
+  position: relative;
+}
+
+.wrapper-profile-bottom {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  justify-content: space-between;
+
+}
+
+.summary {
+  margin-right: 2rem;
+  max-width: 60%;
+}
+
+.contact {
+  flex-shrink: 0;
+}
+
+.contact li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact ul {
+  margin: 0;
+  padding: 0;
+}
