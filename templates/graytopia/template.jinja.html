@@ -1,0 +1,102 @@
+<head>
+    <link rel="stylesheet" href="_template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-top">
+            <div class="wrapper-profile-top content">
+                <div class="wrapper-left">
+                    <h1 class="first-name header">{{ resume.profile.first_name }}</h1>
+                    <h1 class="last-name header">{{ resume.profile.last_name }}</h1>
+                    <div class="meta header">
+                        <span class="function">{{ resume.profile.function }}</span>
+                        <span class="age">{{resume.profile.age}} Years Old</span>
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <img src="{{ resume.profile.photo }}" />
+                </div>
+            </div>
+            <div class="wrapper-profile-bottom content">
+                <div class="summary">
+                    <h2>Professional profile</h2>
+                    <p>
+                        {{ resume.summary.text }}
+                    </p>
+                </div>
+                <div class="contact">
+                    <h2>contact</h2>
+                    <p>
+                    <ul>
+                        <li><object class="svg" data="images/icons/Mail.svg" type="image/svg+xml" width="24"
+                                height="24"></object> {{ resume.contact.email }}</li>
+                        <li><object class="svg" data="images/icons/Phone.svg" type="image/svg+xml" width="24"
+                                height="24"></object> {{ resume.contact.phone }}</li>
+                        <li><object class="svg" data="images/icons/LinkedIn.svg" type="image/svg+xml" width="24"
+                                height="24"></object> <a href="{{ resume.contact.linkedin }}" target="_blank">{{
+                                resume.contact.linkedin_short }}</a></li>
+                        <li><object class="svg" data="images/icons/Address.svg" type="image/svg+xml" width="24"
+                                height="24"></object> {{ resume.contact.address }}</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-bottom">
+            <div class="wrapper-inner content">
+                <div class="wrapper-left">
+                    <h2>Work experience</h2>
+                    <div class="experience-wrapper">
+                        {% for experience in resume.experience %}
+                        <div class="experience">
+                            <h3>{{ experience.role }}</h3>
+                            <span>{{ experience.start_year }} - {{ "Present" if experience.present else experience.end_year
+                                }} @ {{ experience.company }} </span>
+                            <ul class="competencies">
+                                {% for competency in experience.competencies %}
+                                <li>{{ competency }}</li>
+                                {% endfor %}
+                            </ul>
+                            <ul class="technologies">
+                                {% for technology in experience.technologies %}
+                                <li>{{ technology }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="wrapper-right">
+                    <h2>Education</h2>
+                    <ul class="education">
+                        {% for education in resume.education %}
+                        <div>
+                            <h3>{{ education.institution }}</h3>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Array.from(document.getElementsByClassName('svg')).forEach(el => {
+            el.addEventListener('load', (el) => {
+            });
+        })
+    </script>
+    <style>
+        :root {
+            --accent-color: {{ resume.theme.accent_color.strip('"') }};
+            --foreground-color: {{ resume.theme.foreground_color.strip('"') }};
+            --background-color: {{ resume.theme.background_color.strip('"') }};
+        }
+    </style>
+</body>
