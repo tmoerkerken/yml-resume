@@ -1,8 +1,6 @@
 @page {
   size: A4;
-  /* Change from the default size of A4 */
   margin: 3rem 0rem;
-  /* Set margin on each page */
 }
 
 @page :first {
@@ -12,7 +10,6 @@
 @media print {
   :root {
     font-size: 10pt !important;
-    break-inside: unset;
   }
 }
 
@@ -88,14 +85,14 @@ p {
   align-items: center;
   width: 100%;
   background: var(--background-color);
-  padding: 4rem 3rem 2rem 3rem;
+  padding: 4rem 3rem 1rem 3rem;
 }
 
 .wrapper-bottom {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 4rem 3rem 2rem 3rem;
+  padding: 3rem 3rem 2rem 3rem;
 
 }
 
