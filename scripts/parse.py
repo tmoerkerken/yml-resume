@@ -19,9 +19,7 @@ config.read(theme_folder / 'defaults.cfg')
 with open('resume.yml', 'r') as file:
   resume = yaml.safe_load(file)
 
-resume["theme"] = {}
-resume["theme"] = config["colors"]
-
+resume["config"] = config
 
 # inject computed
 current_year = datetime.now().year
