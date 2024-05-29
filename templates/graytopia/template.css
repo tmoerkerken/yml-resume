@@ -241,7 +241,7 @@ ul.technologies {
 }
 
 .education {
-  margin-top: var(--margin-top-large);
+  margin-top: 0.5rem;
 }
 
 .wrapper-bottom .wrapper-inner {
