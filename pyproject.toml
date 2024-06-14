@@ -12,6 +12,7 @@ python = "^3.9"
 pyyaml = "^6.0.1"
 jinja2 = "^3.1.4"
 playwright = "^1.44.0"
+ruff = "^0.4.8"
 
 [build-system]
 requires = ["poetry-core"]

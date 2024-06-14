@@ -1,0 +1,107 @@
+profile:
+  first_name: Jamie
+  last_name: Stevens
+  function: Lead Software Developer
+  birth_date: 12-08-1985
+  photo: https://images.generated.photos/bGOAAaFH7Knru0Qcx52_2mRvGbrqseA7UzJfl3Vm-GE/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MTk0ODEzLmpwZw.jpg
+contact:
+  email: jamie.stevens@example.com
+  phone: "+1123456789"
+  address: Amsterdam, The Netherlands
+summary:
+  text: "Experienced software developer with a focus on innovative problem-solving and a strong technical background in regulated environments."
+experience:
+  - company: MedInnovate
+    position: Senior Developer
+    start_year: 2018
+    end_year: Present
+    role: Lead Software Developer
+    competencies:
+      - SaMD development
+      - Compliance with IEC and ISO standards
+      - Backend and frontend development
+    technologies:
+      - Ruby
+      - JavaScript
+      - Angular
+      - D3.js
+      - Sketch
+  - company: HealthTech Corp
+    position: Developer
+    start_year: 2014
+    end_year: 2018
+    role: Software Engineer
+    competencies:
+      - Medical imaging algorithms
+      - Statistical modeling
+      - Software testing
+    technologies:
+      - Java
+      - R
+  - company: AutoTech Team
+    position: Intern
+    start_year: 2012
+    end_year: 2013
+    role: Embedded Systems Developer
+    competencies:
+      - PCB design
+      - Microcontroller programming
+    technologies:
+      - C++
+      - Assembly
+education:
+  - institution: University of Amsterdam
+    field: Computer Science
+    degree: MSc
+    start_year: 2013
+    end_year: 2015
+  - institution: University of Amsterdam
+    field: Electrical Engineering
+    degree: BSc
+    start_year: 2008
+    end_year: 2012
+projects:
+  - title: Remote Health Monitoring
+    description: Developed a remote health monitoring application for chronic patients.
+certifications:
+  - name: Advanced Software Development
+    issuing_organization: DevCert
+    date: 2019-03
+languages:
+  - name: Dutch
+    proficiency: Native
+  - name: English
+    proficiency: Fluent
+skills:
+  - Full-stack Development
+  - User Experience Design
+  - Quality Assurance
+technologies:
+  - name: DevOps
+    sub:
+    - AWS
+    - Docker
+    - Jenkins
+    - Ansible
+  - name: Languages
+    sub:
+    - Python
+    - JavaScript
+    - Ruby
+    - Java
+  - name: Frameworks
+    sub:
+    - React
+    - Angular
+    - Django
+    - Spring
+  - name: Tools
+    sub:
+    - Git
+    - Jira
+    - Postman
+    - Selenium
+links:
+  - linkedin.com/in/yml-resume-jamie-stevens
+  - github.com/yml-resume-jstevens
+personal: "In my free time, I enjoy rock climbing, photography, and playing the violin. I also like to explore new technologies and work on DIY electronics projects."

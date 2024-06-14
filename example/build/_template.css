@@ -4,7 +4,7 @@
 }
 
 @page :first {
-  margin: 0rem 0 3rem 0;
+  margin: 0rem 0 0rem 0;
 }
 
 @media print {
@@ -13,9 +13,12 @@
   }
 }
 
+body {
+}
+
 :root {
   --picture-size: 160px;
-  --margin-top-large: 1rem;
+  --margin-top-large: 0.8rem;
   --sidebar-width: 240px;
   font-weight: 100;
   font-family: "Roboto", sans-serif;
@@ -71,7 +74,7 @@ h3 {
 }
 
 p {
-  margin-top: 1rem;
+  margin-top: var(--margin-top-large);
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
@@ -148,7 +151,6 @@ ul {
   width: 2.5rem;
   left: calc(50% - 1.25rem);
   top: -4rem;
-  background-color: var(--accent-color);
 }
 
 .wrapper-profile-top .wrapper-left,
@@ -225,6 +227,7 @@ ul.technologies {
 
 .wrapper .wrapper-bottom {
   display: flex;
+  background-color: white;
 }
 
 .wrapper-bottom .wrapper-left {
@@ -257,4 +260,12 @@ ul.technologies {
 
 .sidebar-item:not(:first-of-type) {
   margin-top: var(--margin-top-large);
+}
+
+.section-item:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+.sub-technology {
+  font-style: italic;
 }

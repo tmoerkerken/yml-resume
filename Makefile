@@ -9,5 +9,6 @@ open:
 
 hotreload_init:
 	watchman watch .
-	watchman -- trigger . recompile "**/*.yml" "templates/**/*" -- "${PWD}/scripts/hot_reload.sh"
+	watchman -- trigger . recompile "**/*.yml" "themes/**/*" -- "${PWD}/scripts/hot_reload.sh"
+
 create: parse render

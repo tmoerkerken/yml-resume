@@ -26,10 +26,12 @@
             </div>
             <div class="wrapper-profile-bottom content">
                 <div class="summary">
-                    <h2>Professional profile</h2>
-                    <p>
-                        {{ resume.summary.text }}
-                    </p>
+                    <div class="summary-item">
+                        <h2>Professional profile</h2>
+                        <p>
+                            {{ resume.summary.text }}
+                        </p>
+                    </div>
                 </div>
                 <div class="contact">
                     <h2>contact</h2>
@@ -39,9 +41,6 @@
                                 height="24"></object> {{ resume.contact.email }}</li>
                         <li><object class="svg" data="images/icons/Phone.svg" type="image/svg+xml" width="24"
                                 height="24"></object> {{ resume.contact.phone }}</li>
-                        <li><object class="svg" data="images/icons/LinkedIn.svg" type="image/svg+xml" width="24"
-                                height="24"></object> <a href="{{ resume.contact.linkedin }}" target="_blank">{{
-                                resume.contact.linkedin_short }}</a></li>
                         <li><object class="svg" data="images/icons/Address.svg" type="image/svg+xml" width="24"
                                 height="24"></object> {{ resume.contact.address }}</li>
                     </ul>
@@ -52,12 +51,13 @@
         <div class="wrapper-bottom">
             <div class="wrapper-inner content">
                 <div class="wrapper-left">
-                    <h2>Work experience</h2>
+                    <h2 class="section-item">Work experience</h2>
                     <div class="experience-wrapper">
                         {% for experience in resume.experience %}
                         <div class="experience">
                             <h3>{{ experience.role }}</h3>
-                            <span>{{ experience.start_year }} - {{ "Present" if experience.present else experience.end_year
+                            <span>{{ experience.start_year }} - {{ "Present" if experience.present else
+                                experience.end_year
                                 }} @ <span class="label">{{ experience.company }}</span></span>
                             <ul class="competencies">
                                 {% for competency in experience.competencies %}
@@ -74,6 +74,10 @@
                         </div>
                         {% endfor %}
                     </div>
+                    <h2 class="section-item">Outside of work</h2>
+                    <p>
+                        {{ resume.personal }}
+                    </p>
                 </div>
                 <div class="wrapper-right">
                     <div class="sidebar-item">
@@ -89,10 +93,50 @@
                         <div class="education">
                             {% for education in resume.education %}
                             <div class="education-item">
-                                <h3>{{ education.field }}</h3>
-                                <span>{{ education.start_year }} - {{ "Present" if education.present else education.end_year }} @ {{ education.institution }}</span>
-                                <div class="label">{{ education.degree }}</div>
+                                <div><span>{{ education.field }}</span><span> ({{ education.degree }})</span></div>
+                                <span>{{ education.start_year }} - {{ "Present" if education.present else
+                                    education.end_year }} @ <span class="label">{{ education.institution
+                                        }}</span></span>
+
                             </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <h2>Skills</h2>
+                        <div class="skills">
+                            {% for skill in resume.skills %}
+                            <ul class="skill-item">
+                                <li>{{ skill }}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <h2>Technologies</h2>
+                        <div class="technologies">
+                            {% for technology in resume.technologies %}
+                            <ul class="technology-item">
+                                {% if technology is mapping %}
+                                <li>
+                                    <span>{{ technology.name }}</span>
+                                    <span class="sub-technology">({{ technology.sub |join(", ") }})</span>
+
+                                </li>
+                                {% else %}
+                                <li>{{ technology }}</li>
+                                {% endif %}
+                            </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <h2>Links</h2>
+                        <div class="links">
+                            {% for link in resume.links %}
+                            <ul class="link-item">
+                                <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                            </ul>
                             {% endfor %}
                         </div>
                     </div>
@@ -106,6 +150,7 @@
             });
         })
     </script>
+
     <style>
         :root {
             --accent-color: {{ resume.config.colors.accent_color.strip('"') }};

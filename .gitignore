@@ -1,3 +1,6 @@
 output/
-resume.yml
-**/picture.*
+input/
+**/*/build
+
+!exmaple/**
+!example/build/
