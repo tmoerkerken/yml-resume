@@ -151,6 +151,7 @@ ul {
   width: 2.5rem;
   left: calc(50% - 1.25rem);
   top: -4rem;
+  background-color: var(--accent-color);
 }
 
 .wrapper-profile-top .wrapper-left,
