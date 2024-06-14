@@ -1,6 +1,8 @@
 # YML-Resume
 YML-Resume allows you to quickly and programmatically create beautiful web and PDF resumes from structured YAML files. The package is in a very early development stage.
 
+[Example resume](example/build/resume.pdf)
+
 ## Setting up
 Make sure that `python` and `poetry` are installed on your system.
 Then run `poetry install` to install the requirements.
