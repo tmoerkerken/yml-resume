@@ -1,5 +1,5 @@
 # YML-Resume
-YML-Resume allows you to quickly and programmatically create beautiful resumes from structured YAML files. The package is in a very early stage.
+YML-Resume allows you to quickly and programmatically create beautiful resumes from structured YAML files. The package is in a very early development stage.
 
 ## Setting up
 Make sure that `python` and `poetry` are installed on your system.
@@ -13,7 +13,7 @@ There is an example input folder called `example`. This folder can be renamed to
 Note that additional context is provided with `--help`. For quick generation with defaults, use `make create`.
 
 ## Theming
-Currently one theme is created, called `graytopia`. Theme settings like accent colors can be configured via `themes/<theme_name>/defaults.cfg`.
+Currently one theme is provided, called `graytopia`. Theme settings like accent colors can be configured via `themes/<theme_name>/defaults.cfg`.
 
 ## Development
 ### Hot reloading:
