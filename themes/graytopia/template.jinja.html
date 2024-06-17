@@ -93,7 +93,7 @@
                         <div class="education">
                             {% for education in resume.education %}
                             <div class="education-item">
-                                <div><span>{{ education.field }}</span><span> ({{ education.degree }})</span></div>
+                                <div><span>{{ education.field }}</span><div>{{ education.degree }}</div></div>
                                 <span>{{ education.start_year }} - {{ "Present" if education.present else
                                     education.end_year }} @ <span class="label">{{ education.institution
                                         }}</span></span>

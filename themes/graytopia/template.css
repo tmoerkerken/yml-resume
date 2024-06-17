@@ -9,7 +9,7 @@
 
 @media print {
   :root {
-    font-size: 10pt !important;
+    font-size: 9pt !important;
   }
 }
 
@@ -17,10 +17,10 @@ body {
 }
 
 :root {
-  --picture-size: 160px;
+  --picture-size: 150px;
   --margin-top-large: 0.8rem;
   --sidebar-width: 240px;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 12pt;
@@ -260,7 +260,7 @@ ul.technologies {
 }
 
 .sidebar-item:not(:first-of-type) {
-  margin-top: var(--margin-top-large);
+  margin-top: calc(var(--margin-top-large) * 1.2);
 }
 
 .section-item:not(:first-of-type) {

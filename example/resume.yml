@@ -51,13 +51,12 @@ experience:
       - Assembly
 education:
   - institution: University of Amsterdam
-    field: Computer Science
-    degree: MSc
+    field: Computer Science (MSc)
+    degree: Data Visualization
     start_year: 2013
     end_year: 2015
   - institution: University of Amsterdam
-    field: Electrical Engineering
-    degree: BSc
+    field: Electrical Engineering (BSc)
     start_year: 2008
     end_year: 2012
 projects:
